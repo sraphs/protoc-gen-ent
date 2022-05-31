@@ -1,5 +1,5 @@
-builds:
-  - skip: true
+# builds:
+#   - skip: true
 
 changelog:
   use: github

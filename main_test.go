@@ -36,7 +36,7 @@ func TestFieldModifier(t *testing.T) {
 	contents, err := tt.fileContents("fields_orm.pb.go")
 	require.NoError(t, err)
 	require.Contains(t, contents, "type PetORM struct")
-	require.Contains(t, contents, `db:"pk"`)
+	require.Contains(t, contents, `db:"id,pk,autoincrement"`)
 }
 
 func TestNested(t *testing.T) {

@@ -8,5 +8,5 @@ option go_package = "ent/testdata";
 
 message Pet {
   option (orm.opts).gen = true;
-  string name = 1 [(orm.field) = { tag: [ "db", "pk" ] }];
+  string name = 1 [(orm.field) = { tag: [ "db", "id", "pk", "autoincrement" ] }];
 }
