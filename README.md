@@ -58,7 +58,7 @@ type PetORM struct {
 
 ```
 
-> fist tag is used as tag key, and other tags are used as tag value.
+> first tag is used as tag key, and other tags are used as tag value.
 
 ## Contributing
 
