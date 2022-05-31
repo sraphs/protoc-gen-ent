@@ -1,6 +1,6 @@
 # go-starter
 
-[![CI](https://github.com/sraphs/protoc-gen-ent/actions/workflows/ci.yml/badge.svg)](https://github.com/sraphs/protoc-gen-ent/actions/workflows/ci.yml)
+[![CI](https://github.com/sraphs/proto-gen-orm/actions/workflows/ci.yml/badge.svg)](https://github.com/sraphs/proto-gen-orm/actions/workflows/ci.yml)
 
 >  Go project template repository
 
@@ -25,7 +25,7 @@
 ## Install
 
 ```bash
-go get github.com/sraphs/protoc-gen-ent
+go get github.com/sraphs/proto-gen-orm
 ```
 
 ## Usage
@@ -45,7 +45,7 @@ We alway welcome your contributions :clap:
 
 
 ## CHANGELOG
-See [Releases](https://github.com/sraphs/protoc-gen-ent/releases)
+See [Releases](https://github.com/sraphs/proto-gen-orm/releases)
 
 ## License
 [MIT © sraph.com](./LICENSE)

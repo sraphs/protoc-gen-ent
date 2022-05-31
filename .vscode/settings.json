@@ -1,5 +1,5 @@
 {
     "gopls": {
-        "formatting.local": "github.com/sraphs/protoc-gen-ent"
+        "formatting.local": "github.com/sraphs/proto-gen-orm"
     },
 }

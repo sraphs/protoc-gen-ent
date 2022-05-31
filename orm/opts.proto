@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/descriptor.proto";
+package orm;
+option go_package = " github.com/sraphs/protoc-gen-orm/orm";
+
+extend google.protobuf.MessageOptions {
+  bool gen = 9001;
+}
+
+extend google.protobuf.FieldOptions {
+  repeated string tags = 9001;
+}

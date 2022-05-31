@@ -1,4 +1,4 @@
-MOD_NAME := github.com/sraphs/protoc-gen-ent
+MOD_NAME := github.com/sraphs/proto-gen-orm
 
 # Git variables
 GIT_COMMIT    = $(shell git rev-parse HEAD)
