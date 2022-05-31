@@ -1,38 +1,23 @@
-# go-starter
+# protoc-gen-go_orm
 
 [![CI](https://github.com/sraphs/protoc-gen-go_orm/actions/workflows/ci.yml/badge.svg)](https://github.com/sraphs/protoc-gen-go_orm/actions/workflows/ci.yml)
 
->  Go project template repository
-
-
-## Work flow
-
-1. Create a new repository from go-starter
-2. Use `make rename` to change go mod name
-2. Create a dev branch from main
-3. Make changes
-4. Commit code
-5. Merge pull requests
-5. Create tag
-6. Git Action auto generate CHANGELOG.md and create release
-
-## Features
-
-- xxxx
-- xxxx
-- xxxx
+>  Simply generate ORM model from proto
 
 ## Install
 
 ```bash
-go get github.com/sraphs/protoc-gen-go_orm
+go install github.com/sraphs/protoc-gen-go_orm@latest
 ```
 
 ## Usage
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+protoc \
+    --proto_path ./internal/testdata \
+    --proto_path . \
+    --go_out=paths=source_relative:. \
+    --go_orm_out=paths=source_relative:. \
+    ./internal/testdata/basic.proto
 
 ## Contributing
 
