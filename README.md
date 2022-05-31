@@ -12,12 +12,33 @@ go install github.com/sraphs/protoc-gen-go_orm@latest
 
 ## Usage
 
+Define your proto file in `.proto` format.
+
+```proto
+syntax = "proto3";
+
+package testdata;
+
+import "orm/opts.proto";
+
+option go_package = "ent/testdata";
+
+message Pet {
+  option (orm.opts).gen = true;
+  string name = 1 [(orm.field) = { tag: [ "db", "pk" ] }];
+}
+```
+
+Run `protoc` to generate `.pb.go` and `_orm.pb.go` files.
+
+```bash
 protoc \
     --proto_path ./internal/testdata \
     --proto_path . \
     --go_out=paths=source_relative:. \
     --go_orm_out=paths=source_relative:. \
-    ./internal/testdata/basic.proto
+    ./internal/testdata/fields.proto
+```
 
 ## Contributing
 
