@@ -2,31 +2,31 @@ syntax = "proto3";
 
 package testdata;
 
-import "options/ent/opts.proto";
+import "orm/opts.proto";
 
 option go_package = "ent/testdata";
 
 message Cat {
-  option (ent.schema).gen = true;
-  string name = 1 [(ent.field) = {optional: true, storage_key: "shem"}];
-  Human owner = 2 [(ent.edge) = {}];
+  option (orm.opts).gen = true;
+  string name = 1 [(orm.field) = { tag: [ "db", "pk" ] }];
+  Human owner = 2 [(orm.field) = { tag: [ "db", "-" ] }];
 }
 
 message Human {
-  option (ent.schema).gen = true;
+  option (orm.opts).gen = true;
   string name = 1;
-  repeated Cat cats = 2 [(ent.edge) = {ref: "owner"}];
+  repeated Cat cats = 2 [(orm.field) = { tag: [ "db", "-" ] }];
 }
 
 message Article {
-  option (ent.schema).gen = true;
+  option (orm.opts).gen = true;
   string title = 1;
   string body = 2;
-  repeated Category categories = 3 [(ent.edge) = {storage_key: {table: "table", columns: ["a", "b"]}}];
+  repeated Category categories = 3 [(orm.field) = { tag: [ "db", "-" ] }];
 }
 
 message Category {
-  option (ent.schema).gen = true;
+  option (orm.opts).gen = true;
   string title = 1;
-  repeated Article articles = 2 [(ent.edge) = {ref: "categories"}];
+  repeated Article articles = 2 [(orm.field) = { tag: [ "db", "-" ] }];
 }

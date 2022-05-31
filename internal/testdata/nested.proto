@@ -9,8 +9,10 @@ option go_package = "ent/testdata";
 message Basic {
   option (orm.opts).gen = true;
   string name = 1;
-}
-
-message Skipped {
-  string name = 1;
+  Nested nested = 2;
+  message Nested {
+    option (orm.opts).gen = true;
+    option (orm.opts).suffix = "ORM";
+    string name = 3;
+  }
 }

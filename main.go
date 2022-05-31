@@ -32,6 +32,6 @@ func main() {
 		log.Printf("%v %v\n", filepath.Base(os.Args[0]), version)
 		os.Exit(0)
 	}
-
+	generator.Version = version
 	protogen.Options{}.Run(generator.Run)
 }

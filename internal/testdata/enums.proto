@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package testdata;
 
-import "options/ent/opts.proto";
+import "orm/opts.proto";
 
 option go_package = "ent/testdata";
 
@@ -16,7 +16,7 @@ enum JobStatus {
 }
 
 message Job {
-  option (ent.schema).gen = true;
+  option (orm.opts).gen = true;
   string name = 1;
   JobStatus status = 2;
   Priority priority = 3;

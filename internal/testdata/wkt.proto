@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package testdata;
 
-import "options/ent/opts.proto";
+import "orm/opts.proto";
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/struct.proto";
@@ -10,7 +10,7 @@ import "google/protobuf/struct.proto";
 option go_package = "ent/testdata";
 
 message Wtk {
-  option (ent.schema).gen = true;
+  option (orm.opts).gen = true;
   google.protobuf.Timestamp create_time = 1;
   google.protobuf.Duration ttl = 2;
   google.protobuf.Struct json = 3;

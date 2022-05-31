@@ -2,12 +2,21 @@ syntax = "proto3";
 
 import "google/protobuf/descriptor.proto";
 package orm;
-option go_package = " github.com/sraphs/protoc-gen-orm/orm";
+option go_package = " github.com/sraphs/protoc-gen-go_orm/orm";
 
 extend google.protobuf.MessageOptions {
-  bool gen = 9001;
+  Opts opts = 9001;
+}
+
+message Opts {
+  bool gen = 1;
+  string suffix = 2;
 }
 
 extend google.protobuf.FieldOptions {
-  repeated string tags = 9001;
+  Field field = 9001;
+}
+
+message Field {
+  repeated string tag = 1;
 }
