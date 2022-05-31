@@ -21,7 +21,7 @@ import (
 
 	"google.golang.org/protobuf/compiler/protogen"
 
-	"github.com/sraphs/proto-gen-orm/generator"
+	"github.com/sraphs/protoc-gen-go_orm/generator"
 )
 
 var version = "dev"

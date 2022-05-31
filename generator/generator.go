@@ -4,6 +4,8 @@ import (
 	"google.golang.org/protobuf/compiler/protogen"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/descriptorpb"
+
+	"github.com/sraphs/protoc-gen-go_orm/orm"
 )
 
 func Run(gen *protogen.Plugin) error {

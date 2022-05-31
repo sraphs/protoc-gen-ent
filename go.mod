@@ -1,4 +1,4 @@
-module github.com/sraphs/protoc-gen-orm
+module github.com/sraphs/protoc-gen-go_orm
 
 go 1.18
 
